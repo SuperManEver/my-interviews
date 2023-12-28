@@ -9,6 +9,12 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 8%;
 
+  .titleWrapper {
+    & > * {
+      display: inline-block;
+    }
+  }
+
   .title {
     color: var(--color-brand-800);
     font-size: 64px;

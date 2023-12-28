@@ -5,7 +5,7 @@ import Header from '@/app/components/landing/header';
 import heroImg from '@/app/assets/hero-image.png';
 
 // styles
-import css from './page.module.css';
+import css from './page.module.scss';
 
 function Home() {
   return (
@@ -14,7 +14,9 @@ function Home() {
 
       <section className={css.heroSection}>
         <div>
-          <h1 className={css.title}>Get ready for your next big jump</h1>
+          <div className={css.titleWrapper}>
+            <h1 className={css.title}>Get ready for your next big jump 🚀</h1>
+          </div>
 
           <p className={css.text}>
             Are you ready to land your dream tech job? Unlock your full
