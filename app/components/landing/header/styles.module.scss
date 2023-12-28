@@ -1,0 +1,23 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  & > *:first-child {
+    margin-right: 10px;
+  }
+
+  .title {
+    color: var(--color-brand-800);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+  }
+}

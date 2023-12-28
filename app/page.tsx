@@ -1,11 +1,15 @@
 // components
-import Image from 'next/image';
+import Header from '@/app/components/landing/header';
 
 // styles
-import styles from './page.module.css';
+import css from './page.module.css';
 
 function Home() {
-  return <main>Landing</main>;
+  return (
+    <main>
+      <Header className={css.header} />
+    </main>
+  );
 }
 
 export default Home;
