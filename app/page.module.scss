@@ -1,3 +1,7 @@
+.root {
+  margin-bottom: 32px;
+}
+
 .header {
   margin-top: 30px;
 }
@@ -29,5 +33,25 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 32px;
+  }
+}
+
+.sellingPoints {
+  margin-top: 110px;
+
+  .title {
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--color-brand-800);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 60px; /* 187.5% */
+    text-transform: uppercase;
+  }
+
+  .sellPointsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
   }
 }
