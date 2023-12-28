@@ -1,3 +1,27 @@
 .header {
   margin-top: 30px;
 }
+
+.heroSection {
+  margin-top: 140px;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8%;
+
+  .title {
+    color: var(--color-brand-800);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 70px; /* 109.375% */
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  .text {
+    color: var(--color-brand-700);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+}
