@@ -38,6 +38,7 @@
 
 .sellingPoints {
   margin-top: 110px;
+  margin-bottom: 50px;
 
   .title {
     margin-bottom: 40px;
@@ -53,5 +54,46 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 30px;
+  }
+}
+
+.divider {
+  height: 2px;
+  width: 70%;
+  background-color: var(--color-brand-700);
+  margin: 0 auto;
+}
+
+.reviews {
+  margin: 70px auto 0;
+  width: calc(100% - 180px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .title {
+    width: 70%;
+    color: var(--color-brand-700);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+  }
+
+  .split {
+    & > * {
+      margin-bottom: 8px;
+    }
+
+    .blueDivider {
+      width: 6px;
+      height: 90px;
+      background: var(--color-brand-500);
+    }
+
+    .redDivider {
+      width: 6px;
+      height: 36px;
+      background: var(--color-danger-700);
+    }
   }
 }

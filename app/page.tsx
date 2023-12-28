@@ -56,6 +56,18 @@ function Home() {
           />
         </div>
       </section>
+
+      <div className={css.divider} />
+
+      <section className={css.reviews}>
+        <h2 className={css.title}>Out customers love what we do</h2>
+
+        <div className={css.split}>
+          <div className={css.blueDivider}></div>
+          <div className={css.redDivider}></div>
+          <div className={css.redDivider}></div>
+        </div>
+      </section>
     </main>
   );
 }
