@@ -20,7 +20,7 @@ function Header({ className }: IProps) {
   return (
     <header className={cn(css.root, className)}>
       <div className={css.logo}>
-        <Image src={muscleIcon} alt="title icon" width={48} height={48} />
+        <Image src={muscleIcon} alt="title icon" width={32} height={32} />
         <h2 className={css.title}>My interviews</h2>
       </div>
 
