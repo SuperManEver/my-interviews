@@ -1,0 +1,20 @@
+.root {
+  padding: 14px 20px 30px;
+  background: var(--color-brand-200);
+}
+
+.text {
+  color: var(--color-brand-600);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.author {
+  margin-top: 6px;
+  color: var(--color-brand-700);
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px; /* 156.25% */
+}

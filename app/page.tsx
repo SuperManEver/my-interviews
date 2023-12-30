@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Header from '@/app/components/landing/header';
 import SellingPointCard from '@/app/components/landing/selling-point-card';
+import Reviews from '@/app/components/landing/reviews';
 
 // images
 import heroImg from '@/app/assets/hero-image.png';
@@ -60,13 +61,17 @@ function Home() {
       <div className={css.divider} />
 
       <section className={css.reviews}>
-        <h2 className={css.title}>Out customers love what we do</h2>
+        <div>
+          <h2 className={css.title}>Out customers love what we do</h2>
 
-        <div className={css.split}>
-          <div className={css.blueDivider}></div>
-          <div className={css.redDivider}></div>
-          <div className={css.redDivider}></div>
+          <div className={css.split}>
+            <div className={css.blueDivider}></div>
+            <div className={css.redDivider}></div>
+            <div className={css.redDivider}></div>
+          </div>
         </div>
+
+        <Reviews />
       </section>
     </main>
   );

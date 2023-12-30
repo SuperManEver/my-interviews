@@ -70,6 +70,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+  & > *:first-child {
+    display: flex;
+  }
+
   .title {
     width: 70%;
     color: var(--color-brand-700);
