@@ -73,6 +73,10 @@ function Home() {
 
         <Reviews />
       </section>
+
+      <footer className={css.footer}>
+        <p className={css.name}>MyInterviews © 2023 – 2024</p>
+      </footer>
     </main>
   );
 }
