@@ -2,6 +2,7 @@
 import React from 'react';
 import cn from 'clsx';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // components
 import Button from '@/app/components/ui/button';
@@ -24,9 +25,11 @@ function Header({ className }: IProps) {
         <h2 className={css.title}>My interviews</h2>
       </div>
 
-      <Button styleType="secondary" size="medium">
-        Login
-      </Button>
+      <Link href="/sign-in">
+        <Button styleType="secondary" size="medium">
+          Login
+        </Button>
+      </Link>
     </header>
   );
 }

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Barlow } from 'next/font/google';
+import { ClerkProvider } from '@clerk/nextjs';
+
 import './globals.css';
 
 const barlow = Barlow({ subsets: ['latin'], weight: ['500', '900'] });
@@ -15,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={barlow.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={barlow.className}>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
