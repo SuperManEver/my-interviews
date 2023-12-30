@@ -20,11 +20,13 @@ function Page() {
       </header>
 
       <SignUp
-        path="/sign-up"
-        routing="path"
-        signInUrl="/sign-in"
+        // path="/sign-up"
+        // routing="path"
+        // signInUrl="/sign-in"
+        // redirectUrl="/new-user"
+        // afterSignUpUrl="/new-user"
+        afterSignInUrl="/new-user"
         redirectUrl="/new-user"
-        afterSignUpUrl="/new-user"
       />
     </div>
   );

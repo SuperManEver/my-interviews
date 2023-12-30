@@ -18,7 +18,7 @@ function Page() {
         </Link>
       </header>
 
-      <SignIn />
+      <SignIn redirectUrl="/dashboard" />
     </div>
   );
 }

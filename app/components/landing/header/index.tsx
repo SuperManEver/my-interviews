@@ -3,6 +3,7 @@ import React from 'react';
 import cn from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { auth } from '@clerk/nextjs';
 
 // components
 import Button from '@/app/components/ui/button';
@@ -17,7 +18,14 @@ interface IProps {
   className?: string;
 }
 
-function Header({ className }: IProps) {
+async function Header({ className }: IProps) {
+  const { userId } = await auth();
+
+  console.log('userId: ', userId);
+
+  let href = userId ? '/dashboard' : '/sign-in';
+  let title = userId ? 'Dashboard' : 'Login';
+
   return (
     <header className={cn(css.root, className)}>
       <div className={css.logo}>
@@ -25,9 +33,9 @@ function Header({ className }: IProps) {
         <h2 className={css.title}>My interviews</h2>
       </div>
 
-      <Link href="/sign-in">
+      <Link href={href}>
         <Button styleType="secondary" size="medium">
-          Login
+          {title}
         </Button>
       </Link>
     </header>
