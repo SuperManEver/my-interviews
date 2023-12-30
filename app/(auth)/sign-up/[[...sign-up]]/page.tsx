@@ -12,7 +12,7 @@ function Page() {
   return (
     <div className={css.wrapper}>
       <header>
-        <Link href="/sign-up">
+        <Link href="/sign-in">
           <Button styleType="secondary" className={css.backButton}>
             Go back
           </Button>
