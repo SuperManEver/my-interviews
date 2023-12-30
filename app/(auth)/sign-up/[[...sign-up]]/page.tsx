@@ -1,5 +1,6 @@
 import { SignUp } from '@clerk/nextjs';
 
+// styles
 import css from './styles.module.scss';
 
 function Page() {
