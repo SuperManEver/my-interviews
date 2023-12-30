@@ -29,3 +29,11 @@ Because Prisma Client is tailored to your own schema, you need to update it ever
 ```bash
 npx prisma generate
 ```
+
+## Create tables in DB
+
+To actually create the tables in your database, you now can use the following command of the Prisma CLI:
+
+```bash
+npx prisma db push
+```

@@ -5,11 +5,15 @@ import { redirect } from 'next/navigation';
 const createNewUser = async () => {
   const user = await currentUser();
 
+  console.log('user: ', user);
+
   const match = await prisma.user.findUnique({
     where: {
       clerkId: user ? user.id : void 0,
     },
   });
+
+  console.log('match: ', match);
 
   // If it is a brand new user we should do all required initialization
   // like
