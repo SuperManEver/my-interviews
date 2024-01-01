@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  padding: 8px 10px;
+
+  &:hover,
+  &.active {
+    border-radius: 14px;
+    background: var(--color-neutral-700);
+
+    svg {
+      stroke: white;
+    }
+
+    .name {
+      color: white;
+    }
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.name {
+  margin-left: 4px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+}
