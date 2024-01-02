@@ -1,4 +1,6 @@
 .sidebar {
+  display: grid;
+  grid-template-rows: 70px 1fr 50px;
   margin: 18px;
   padding: 18px;
   background-color: #f0f0f0;
@@ -23,6 +25,17 @@
       font-weight: 700;
       line-height: 60px;
       text-transform: uppercase;
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+
+    .userName {
+      margin-left: 6px;
+      font-size: 16px;
+      color: var(--color-brand-700);
     }
   }
 }
