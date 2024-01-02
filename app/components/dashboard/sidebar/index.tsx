@@ -53,7 +53,7 @@ function Sidebar() {
       </section>
 
       <footer className={css.footer}>
-        <UserButton />
+        <UserButton afterSignOutUrl="/" />
         <p className={css.userName}>{user?.firstName + ' ' + user?.lastName}</p>
       </footer>
     </aside>
