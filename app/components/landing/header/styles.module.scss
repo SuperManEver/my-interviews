@@ -21,3 +21,18 @@
     text-transform: uppercase;
   }
 }
+
+.button {
+  border-radius: 0;
+  border-width: 2px;
+  border-color: var(--color-danger-600);
+  background-color: white;
+  color: var(--color-danger-600);
+  transition: background-color 300ms ease;
+  text-transform: uppercase;
+
+  &:hover {
+    border-color: var(--color-danger-600);
+    background-color: var(--color-danger-100);
+  }
+}

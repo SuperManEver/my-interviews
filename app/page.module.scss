@@ -112,3 +112,20 @@
     font-size: 16px;
   }
 }
+
+.button {
+  margin-top: 34px;
+  padding: 20px 60px;
+  border-radius: 0;
+  border: none;
+  background-color: var(--color-danger-600);
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 300ms ease;
+
+  &:hover {
+    background-color: var(--color-danger-700);
+  }
+}

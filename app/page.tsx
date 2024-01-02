@@ -1,8 +1,13 @@
+// vendor
+import { auth } from '@clerk/nextjs';
+
 // components
 import Image from 'next/image';
+import Link from 'next/link';
 import Header from '@/app/components/landing/header';
 import SellingPointCard from '@/app/components/landing/selling-point-card';
 import Reviews from '@/app/components/landing/reviews';
+import Button from '@/app/components/ui/button';
 
 // images
 import heroImg from '@/app/assets/hero-image.png';
@@ -10,7 +15,12 @@ import heroImg from '@/app/assets/hero-image.png';
 // styles
 import css from './page.module.scss';
 
-function Home() {
+async function Home() {
+  const { userId } = await auth();
+
+  let href = userId ? '/dashboard' : '/sign-in';
+  let title = userId ? 'Dashboard' : 'Join now';
+
   return (
     <main className={css.root}>
       <Header className={css.header} />
@@ -27,6 +37,12 @@ function Home() {
             interviews and acing your career in the ever-evolving world of
             technology.
           </p>
+
+          <Link href={href}>
+            <Button styleType="secondary" size="medium" className={css.button}>
+              {title}
+            </Button>
+          </Link>
         </div>
 
         <div>

@@ -21,10 +21,8 @@ interface IProps {
 async function Header({ className }: IProps) {
   const { userId } = await auth();
 
-  console.log('userId: ', userId);
-
   let href = userId ? '/dashboard' : '/sign-in';
-  let title = userId ? 'Dashboard' : 'Login';
+  let title = userId ? 'Dashboard' : 'Join now';
 
   return (
     <header className={cn(css.root, className)}>
@@ -36,7 +34,7 @@ async function Header({ className }: IProps) {
       </Link>
 
       <Link href={href}>
-        <Button styleType="secondary" size="medium">
+        <Button styleType="secondary" size="medium" className={css.button}>
           {title}
         </Button>
       </Link>
