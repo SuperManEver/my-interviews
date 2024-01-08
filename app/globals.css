@@ -64,6 +64,8 @@
   --color-neutral-300: rgba(144, 161, 168, 1);
   --color-neutral-200: rgba(204, 204, 204, 1);
   --color-neutral-100: rgba(219, 220, 220, 1);
+
+  --mobile-screen-size: 768px;
 }
 
 * {

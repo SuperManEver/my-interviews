@@ -1,7 +1,19 @@
+$mobile-width: 768px;
+
+@mixin for-mobile {
+  @media screen and (max-width: #{$mobile-width + 1px}) {
+    @content;
+  }
+}
+
 .root {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include for-mobile {
+    margin: 0 20px;
+  }
 }
 
 .logo {
@@ -15,10 +27,13 @@
   .title {
     color: var(--color-brand-800);
     font-size: 32px;
-    font-style: normal;
     font-weight: 700;
     line-height: 60px;
     text-transform: uppercase;
+
+    @include for-mobile {
+      display: none;
+    }
   }
 }
 
@@ -30,6 +45,12 @@
   color: var(--color-danger-600);
   transition: background-color 300ms ease;
   text-transform: uppercase;
+
+  @include for-mobile {
+    font-size: 15px;
+    line-height: 25px;
+    padding: 0 16px;
+  }
 
   &:hover {
     border-color: var(--color-danger-600);
