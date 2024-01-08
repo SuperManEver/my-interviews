@@ -38,14 +38,14 @@ async function Home() {
             technology.
           </p>
 
-          <Link href={href}>
+          <Link href={href} className={css.joinLink}>
             <Button styleType="secondary" size="medium" className={css.button}>
               {title}
             </Button>
           </Link>
         </div>
 
-        <div>
+        <div className={css.heroImageWrapper}>
           <Image
             src={heroImg}
             alt="hero image section"

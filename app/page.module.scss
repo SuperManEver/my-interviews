@@ -1,3 +1,11 @@
+$mobile-width: 768px;
+
+@mixin for-mobile {
+  @media screen and (max-width: #{$mobile-width + 1px}) {
+    @content;
+  }
+}
+
 .root {
   max-width: 1080px;
   margin: 0 auto 32px;
@@ -10,6 +18,10 @@
 .heroSection {
   margin-top: 140px;
   display: grid;
+
+  @include for-mobile {
+    display: block;
+  }
 
   grid-template-columns: 1fr 1fr;
   column-gap: 8%;
@@ -27,6 +39,12 @@
     line-height: 70px; /* 109.375% */
     text-transform: uppercase;
     margin-bottom: 25px;
+
+    @include for-mobile {
+      text-align: center;
+      font-size: 43px;
+      line-height: 1.2em;
+    }
   }
 
   .text {
@@ -34,6 +52,34 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 32px;
+
+    @include for-mobile {
+      text-align: center;
+      margin: 0 10px;
+      font-size: 19px;
+      line-height: 28px;
+    }
+  }
+
+  .heroImageWrapper {
+    @include for-mobile {
+      display: none;
+    }
+  }
+
+  .joinLink {
+    @include for-mobile {
+      display: flex;
+      justify-content: center;
+    }
+
+    .button {
+      @include for-mobile {
+        font-size: 19px;
+        line-height: 32px;
+        padding: 10px 32px;
+      }
+    }
   }
 }
 
