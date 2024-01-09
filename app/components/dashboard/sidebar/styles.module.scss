@@ -8,7 +8,7 @@ $mobile-width: 768px;
 
 .sidebar {
   display: grid;
-  grid-template-rows: 70px 1fr 50px;
+  grid-template-rows: 70px 1fr 68px;
   margin: 18px;
   padding: 18px;
   background-color: #f0f0f0;
@@ -18,7 +18,7 @@ $mobile-width: 768px;
   @include for-mobile {
     left: -208.5px;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     border-radius: 0;
   }
