@@ -2,8 +2,9 @@
 
 // vendor
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { UserButton, useUser } from '@clerk/nextjs';
+import cn from 'clsx';
 
 // ui
 import {
@@ -16,19 +17,29 @@ import LinkItem from '@/app/components/dashboard/link-item';
 
 // icons
 import muscleIcon from '@/app/assets/muscle.svg';
+import burgerIcon from '@/app/assets/hamburger-sidebar.svg';
 
 // styles
 import css from './styles.module.scss';
 
 function Sidebar() {
   const { user, isLoaded } = useUser();
+  const [isMenuOpen, setMenuState] = useState<boolean>(false);
 
   if (!isLoaded) {
     return null;
   }
 
+  function handleMenuToggle() {
+    setMenuState((state) => !state);
+  }
+
   return (
-    <aside className={css.sidebar}>
+    <aside className={cn(css.sidebar, { [css.sidebarOpen]: isMenuOpen })}>
+      <button className={css.toggleMobileButton} onClick={handleMenuToggle}>
+        <Image src={burgerIcon} alt="title icon" width={26} height={26} />
+      </button>
+
       <header className={css.logo}>
         <Image src={muscleIcon} alt="title icon" width={32} height={32} />
         <h2 className={css.title}>My interviews</h2>
