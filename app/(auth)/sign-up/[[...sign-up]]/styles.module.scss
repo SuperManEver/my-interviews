@@ -1,13 +1,38 @@
+$mobile-width: 768px;
+
+@mixin for-mobile {
+  @media screen and (max-width: #{$mobile-width + 1px}) {
+    @content;
+  }
+}
+
 .wrapper {
   position: relative;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include for-mobile {
+    flex-direction: column;
+  }
+
+  .header {
+    @include for-mobile {
+      width: 100%;
+      padding-left: 10px;
+      margin: 20px 0;
+    }
+  }
 }
 
 .backButton {
   position: absolute;
   top: 20px;
   left: 0;
+
+  @include for-mobile {
+    position: relative;
+    top: unset;
+  }
 }
