@@ -10,7 +10,7 @@ import css from './styles.module.scss';
 function Page() {
   return (
     <div className={css.wrapper}>
-      <header>
+      <header className={css.header}>
         <Link href="/">
           <Button styleType="secondary" className={css.backButton}>
             Go back
