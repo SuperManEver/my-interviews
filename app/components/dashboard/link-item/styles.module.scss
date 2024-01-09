@@ -1,3 +1,11 @@
+$mobile-width: 768px;
+
+@mixin for-mobile {
+  @media screen and (max-width: #{$mobile-width + 1px}) {
+    @content;
+  }
+}
+
 .root {
   display: flex;
   align-items: center;
@@ -29,4 +37,8 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 32px;
+
+  @include for-mobile {
+    font-size: 18px;
+  }
 }

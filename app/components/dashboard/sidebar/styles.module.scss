@@ -16,7 +16,7 @@ $mobile-width: 768px;
   transition: left 300ms ease;
 
   @include for-mobile {
-    left: -249.5px;
+    left: -208.5px;
     position: absolute;
     height: 100vh;
     margin: 0;
@@ -62,6 +62,10 @@ $mobile-width: 768px;
       font-weight: 700;
       line-height: 60px;
       text-transform: uppercase;
+
+      @include for-mobile {
+        font-size: 18px;
+      }
     }
   }
 
