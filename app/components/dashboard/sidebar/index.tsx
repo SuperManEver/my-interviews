@@ -2,9 +2,11 @@
 
 // vendor
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { UserButton, useUser } from '@clerk/nextjs';
 import cn from 'clsx';
+
+import { useOutsideClick } from '@/utils/hooks';
 
 // ui
 import {
@@ -25,6 +27,11 @@ import css from './styles.module.scss';
 function Sidebar() {
   const { user, isLoaded } = useUser();
   const [isMenuOpen, setMenuState] = useState<boolean>(false);
+  const ref: any = useRef(null);
+
+  useOutsideClick(ref, () => {
+    setMenuState(false);
+  });
 
   if (!isLoaded) {
     return null;
@@ -35,7 +42,10 @@ function Sidebar() {
   }
 
   return (
-    <aside className={cn(css.sidebar, { [css.sidebarOpen]: isMenuOpen })}>
+    <aside
+      ref={ref}
+      className={cn(css.sidebar, { [css.sidebarOpen]: isMenuOpen })}
+    >
       <button className={css.toggleMobileButton} onClick={handleMenuToggle}>
         <Image src={burgerIcon} alt="title icon" width={26} height={26} />
       </button>
