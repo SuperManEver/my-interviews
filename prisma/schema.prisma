@@ -7,6 +7,7 @@ generator client {
 
 datasource db {
   provider  = "postgresql"
+  // Where this env variable is stored? Can the app be run locally?
   url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }

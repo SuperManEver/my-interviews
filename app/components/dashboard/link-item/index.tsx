@@ -11,6 +11,7 @@ interface IProps {
   className?: string;
 }
 
+// Why this component is nested in dashboard folder?
 function LinkItem({ name, href, Icon, className }: IProps) {
   const pathname = usePathname();
 

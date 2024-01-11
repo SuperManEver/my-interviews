@@ -7,6 +7,7 @@ interface IProps {
   author: string;
 }
 
+// Why this component is nested in landing/reviews folder?
 function Review({ text, author }: IProps) {
   return (
     <div className={css.root}>

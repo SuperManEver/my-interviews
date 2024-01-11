@@ -1,5 +1,7 @@
 version: '3.8'
 services:
+#  Lest use Postgres as a service
+# It will be hard to deploy it by docker container with backups and so on
   db:
     image: postgres:14.1-alpine
     restart: always

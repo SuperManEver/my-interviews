@@ -24,6 +24,7 @@ import burgerIcon from '@/app/assets/hamburger-sidebar.svg';
 // styles
 import css from './styles.module.scss';
 
+// Why this component is nested in dashboard folder?
 function Sidebar() {
   const { user, isLoaded } = useUser();
   const [isMenuOpen, setMenuState] = useState<boolean>(false);

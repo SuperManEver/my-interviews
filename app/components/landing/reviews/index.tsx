@@ -9,6 +9,7 @@ const reviews = [
   },
 ];
 
+// Why this component is nested in landing folder?
 function Reviews() {
   return (
     <div>

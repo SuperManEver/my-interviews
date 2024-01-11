@@ -18,6 +18,7 @@ interface IProps {
   className?: string;
 }
 
+// Why this component is nested in landing folder?
 async function Header({ className }: IProps) {
   const { userId } = await auth();
 
