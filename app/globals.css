@@ -78,7 +78,6 @@ html,
 body {
   max-width: 100vw;
   /* It came from default Next.js but it's potentially dangerous - can hide content. */
-  overflow-x: hidden;
   height: 100%;
 }
 
