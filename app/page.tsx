@@ -16,9 +16,6 @@ import heroImg from '@/app/assets/hero-image.png';
 import css from './page.module.scss';
 
 function Home() {
-  // It seems like Clerk#auth does not return a Promise
-  // https://clerk.com/docs/references/nextjs/auth#auth
-  // so we don't need to use async/await here
   const { userId } = auth();
 
   let href = userId ? '/dashboard' : '/sign-in';
